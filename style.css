@@ -111,12 +111,6 @@ hr{
   line-height:1.8;
   margin-bottom:25px;
 }
-.skills{
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 40px;
-}
-
 
 /* SKILLS */
 .skills{
@@ -223,8 +217,8 @@ content: "";
   margin-top:15px;
   display:block;
   font-weight:600;
-  position: absolute;
 }
+
 .skill .circle{
  width: 130px;
   height: 130px;
@@ -264,7 +258,8 @@ content: "";
   background: linear-gradient(145deg, #111, #1c1c1c);
   padding: 30px;
   border-radius: 20px;
-  width: 500px;
+  width: 100%;
+  max-width: 500px;
   transition: 0.4s ease;
   box-shadow: 0 15px 35px rgba(0,0,0,0.6);
   backdrop-filter: blur(10px);
@@ -537,11 +532,6 @@ content: "";
   animation:float ;
 }
 
-@keyframes blink{
-  0%,50%,100%{opacity:1;}
-  25%,75%{opacity:0;}
-}
-
 
 
 
@@ -568,4 +558,140 @@ footer{
   .content h1{
     font-size:48px;
   }
+}
+/* ============================= */
+/* PERFECT MOBILE RESPONSIVE FIX */
+/* ============================= */
+
+@media (max-width: 768px){
+
+  body{
+    overflow-x: hidden;
+  }
+
+  /* HERO SECTION */
+  .profile-hero{
+    flex-direction: column;
+  }
+
+  .content{
+    width: 100%;
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+  .content h1{
+    font-size: 32px;
+  }
+
+  .tagline{
+    font-size: 14px;
+  }
+
+  .details{
+    text-align: center;
+    font-size: 14px;
+  }
+
+  .details strong{
+    width: auto;
+    display: block;
+  }
+
+  .image{
+    width: 100%;
+    height: auto;
+  }
+
+  .image img{
+  width:100%;
+  height:auto;
+  object-fit:cover;
+}
+
+  /* ABOUT SECTION */
+  .container{
+    flex-direction: column;
+    width: 95%;
+    gap: 40px;
+  }
+
+  .about-text{
+    text-align: center;
+  }
+
+  .about-text h2{
+    font-size: 28px;
+  }
+
+  .about-typing{
+    max-width: 100%;
+  }
+
+  /* SKILLS */
+  .skills{
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .circle{
+    width: 120px;
+    height: 120px;
+    font-size: 18px;
+  }
+
+  .circle::after{
+    width: 95px;
+    height: 95px;
+  }
+
+  .skill-title{
+    text-align: center;
+  }
+
+  /* CERTIFICATES */
+  .cert-card{
+    width: 95%;
+    padding: 20px;
+  }
+
+  /* PROJECTS */
+  .project-container{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project-card{
+    width: 95%;
+  }
+
+  /* SERVICES */
+  .section{
+    padding: 50px 20px;
+  }
+
+  .services{
+    grid-template-columns: 1fr;
+  }
+
+  /* CENTER HERO */
+  .hero{
+    min-height: auto;
+    padding: 60px 20px;
+  }
+
+  .profile-img{
+    width: 130px;
+    height: 130px;
+  }
+
+  .hh{
+    font-size: 1.8rem;
+  }
+
+  /* FOOTER */
+  footer{
+    font-size: 14px;
+  }
+
 }
